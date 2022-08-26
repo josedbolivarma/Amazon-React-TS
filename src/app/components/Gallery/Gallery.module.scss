@@ -1,0 +1,23 @@
+.root {
+    display: flex;
+    align-items: center;
+    flex-wrap: no-wrap;
+    gap: 4rem;
+    overflow-x: scroll;
+}
+
+.gallery__box {
+    min-width: 240px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.gallery__image {
+    width: 100%;
+    min-height: 320px;
+    max-height: 320px;
+    object-fit: content;
+    cursor: pointer;
+}

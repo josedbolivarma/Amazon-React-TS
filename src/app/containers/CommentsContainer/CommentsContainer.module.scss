@@ -1,0 +1,23 @@
+.commentsContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 4rem 0;
+  }
+  
+  .commentsContainer__container {
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .commentsContainer__questionsBox {
+    background-color: #393A3F;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .commentsContainer__questions {
+    padding: .6rem;
+    color: #FFF;
+  }

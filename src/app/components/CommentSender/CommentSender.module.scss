@@ -1,0 +1,27 @@
+.commentSender {
+    width: 100%;
+    margin-bottom: 1.4rem;
+}
+
+.commentSender__top {
+  display: flex;
+}
+
+.commentSender__form {
+  display: flex;
+  flex: 1;
+}
+    
+.commentSender__input {
+  outline-width: 0;
+  border: none;
+  padding: .8rem 1.4rem;
+  margin: 0 10px;
+  border-radius: 12px;
+  background-color: #EFF2F5;
+  flex: 1;
+}
+
+.commentSender__inputSubmit {
+  display: none;
+}

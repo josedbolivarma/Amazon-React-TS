@@ -1,0 +1,57 @@
+.sidebar {
+    position: absolute;
+    padding: 1rem;
+    background-color: #CCC;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: .9;
+    transition: 3s all ease;
+}
+
+.sidebar__container {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar__modal {
+    position: relative;
+    width: 100%;
+    background-color: #FFF;
+    padding: 2rem;
+}
+
+.none {
+    display: none;
+    pointer-events: none;
+}
+
+.sidebar__image {
+    width: 200px;
+    height: 200px;
+}
+
+.sidebar__form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.sidebar__input {
+    padding: .4rem .6rem;
+}
+
+.sidebar__close {
+    position: absolute;
+    top: 45%;
+    right: -32px;
+    font-size: 4rem;
+}

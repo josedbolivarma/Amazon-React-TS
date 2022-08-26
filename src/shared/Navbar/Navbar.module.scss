@@ -1,0 +1,15 @@
+.root {
+    width: 100%;
+    padding: .5rem;
+    background-color: #242F3E;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar__box {
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    color: white;
+}

@@ -1,13 +1,105 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* UTILITIES */
+
+.linkRedirect {
+  color: #007185;
+  text-decoration: none;
+}
+
+.linkRedirect:hover {
+  color: #c7511f;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.markPrice {
+  color: #B12704!important;
+  font-size: 1.4rem;
+}
+
+.upperTitle {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  letter-spacing: .3px;
+  font-weight: 600;
+  margin-bottom: .8rem;
+}
+
+/* Buttons */
+.btnPrimary {
+  background: #fef430;
+  border-color: #eee52d;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.btnSecondary {
+  background: #FFA41C;
+  border-color: #FF8F00;
+  border-radius: 2px;
+  padding: .4rem 1.2rem;
+}
+
+.btnThird {
+  background: #180049;
+  border-color: #1c0036;
+  color: #FFF;
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: .4rem 0;
+  width: 200px;
+  transition: all .3s ease;
+}
+
+.btnThird:hover {
+  background: #2b027d;
+  letter-spacing: .8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
