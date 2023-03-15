@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt, FaSearch, FaShoppingCart } from 'react-icons/fa';
 import styles from './Header.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar, Sidebar } from '../';
 import { useSelector } from 'react-redux';
 
@@ -11,6 +11,10 @@ export const Header = () => {
 
   const { cart } = useSelector( ( store: any ) => store.cart );
 
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
+
   const handleLogout = () => {
 
   }
@@ -19,12 +23,15 @@ export const Header = () => {
     <header>
     <div className={styles.header__container}>
       
+      {/* ItemContainer1 */}
+      <div className={styles.header__containerOne}>
       <Link to='/'>
         <img 
         className={styles.logo}
         src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png'/>
       </Link>
 
+      {/* Item 2 */}
       <Link 
       to={'/map'}
       // state={ state }
@@ -42,7 +49,8 @@ export const Header = () => {
                     Elige tu dirección
                 </span>
             </div>
-            </Link>
+        </Link>
+        {/* Item */}
 
         <div
         className={styles.header__search}
@@ -54,9 +62,12 @@ export const Header = () => {
             <FaSearch
             className={styles.header__searchIcon}/>
         </div>
-
+      </div>
+      {/* ItemContainer1 */}
+      
         {/* NAVBAR RESPONSIVE */}
-        <div
+          {/* HeaderContainerTwo */}
+          <div
         className={styles.header__nav}
         >
           {/* /login */}
@@ -125,7 +136,9 @@ export const Header = () => {
                 </Link>
             {/* /checkout */}
         </div>
+          {/* HeaderContainerTwo */}
         {/* NAVBAR RESPONSIVE */}
+
         <div>
         </div>
     </div>

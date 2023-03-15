@@ -1,14 +1,23 @@
+@import "../../scss/lib/mediaqueries";
+
 .root {
     width: 100%; 
     padding: .3rem;
     background-color: #131921;
+    padding: 2rem;
 }
 
 .footer__container {
   width: 90%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  @include respond-to(580px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include tablet {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .footer__box {
