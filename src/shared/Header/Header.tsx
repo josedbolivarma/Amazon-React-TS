@@ -1,22 +1,28 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaMapMarkerAlt, FaSearch, FaShoppingCart } from 'react-icons/fa';
 import styles from './Header.module.scss';
 import { useState, useEffect } from 'react';
 import { Navbar, Sidebar } from '../';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAuth, User } from 'firebase/auth';
+import { logoutAsync } from '../../redux/actions/actionLogin';
 
 export const Header = () => {
 
-  const [ user, setUser ] = useState('');
+  const [ user, setUser ] = useState<User | null>(null);
 
   const { cart } = useSelector( ( store: any ) => store.cart );
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+    const auth = getAuth().currentUser;
+    setUser(auth);
+  }, []);
 
   const handleLogout = () => {
-
+    dispatch<any>(logoutAsync());
+    navigate('/login');
   }
 
   return (
@@ -78,7 +84,7 @@ export const Header = () => {
                 <span
                 className={styles.header__optionLineOne}
                 >
-                  Hello Guest
+                  Hello {user?.displayName || user?.email }
                     {/* Hello {!user ? 'Guest' : user.email } */}
                 </span>
                 <span
