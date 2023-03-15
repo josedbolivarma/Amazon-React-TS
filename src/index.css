@@ -68,7 +68,7 @@ code {
 }
 
 .btnThird {
-  background: #180049;
+  background: #5500ff;
   border-color: #1c0036;
   color: #FFF;
   border-radius: 2px;
@@ -79,7 +79,7 @@ code {
 }
 
 .btnThird:hover {
-  background: #2b027d;
+  background: #6824f0;
   letter-spacing: .8px;
 }
 
