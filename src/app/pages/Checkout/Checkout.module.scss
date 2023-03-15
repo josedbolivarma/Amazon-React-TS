@@ -1,8 +1,15 @@
+@import "../../../scss/lib/mediaqueries";
+
 .root {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding: 1rem;
     background-color: white;
     height: max-content;
+    @include tablet {
+        flex-direction: row;
+    }
 }
 
 .checkout__ad {
