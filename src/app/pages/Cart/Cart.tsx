@@ -8,10 +8,10 @@ import { Subtotal } from '../../components';
 import { useSelector } from 'react-redux';
 import { CheckoutProduct } from '../../components';
 
-import styles from './Checkout.module.scss';
+import styles from './Cart.module.scss';
 import { Product } from '../../../interfaces/products';
 
-export const Checkout = () => {
+export const Cart = () => {
     const [user, setUser] = useState<any>();
     const { cart } = useSelector( ( store: any ) => store.cart);
 
@@ -54,4 +54,4 @@ export const Checkout = () => {
   )
 }
 
-export default Checkout;
+export default Cart;

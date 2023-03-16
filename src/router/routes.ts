@@ -12,7 +12,8 @@ interface Route {
 const lazy1 = lazy(() => import(/* webpackChunkName: "LazyHomePage" */'../app/pages/Home/Home'));
 const lazy2 = lazy(() => import(/* webpackChunkName: "LazyProductsPage" */'../app/pages/Products/Products'));
 const lazy3 = lazy(() => import(/* webpackChunkName: "LazyOrderPage" */'../app/pages/Order/Order'));
-const lazy4 = lazy(() => import(/* webpackChunkName: "LazyOrderPage" */'../app/pages/Checkout/Checkout'));
+const lazy4 = lazy(() => import(/* webpackChunkName: "LazyOrderPage" */'../app/pages/Cart/Cart'));
+const lazy5 = lazy(() => import(/* webpackChunkName: "LazyPaymentPage" */'../app/pages/Payment/Payment'));
 
 export const routes: Route[] = [
     {
@@ -38,5 +39,11 @@ export const routes: Route[] = [
         path: '/cart',
         Component: lazy4,
         name: 'Shopping Cart'
+    },
+    {
+        to: '/payment',
+        path: '/payment',
+        Component: lazy5,
+        name: 'Payment'
     }
 ];
